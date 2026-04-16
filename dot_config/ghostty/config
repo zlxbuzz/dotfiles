@@ -1,0 +1,126 @@
+# ============================================
+# Ghostty Terminal - Complete Configuration
+# ============================================
+# File: ~/.config/ghostty/config
+# Reload: Cmd+Shift+, (macOS)
+# View options: ghostty +show-config --default --docs
+
+# --- Platform ---
+macos-option-as-alt = true
+
+# --- Typography ---
+font-family = "Maple Mono NF CN"
+font-size = 16
+font-thicken = true
+adjust-cell-height = 2
+# --- Theme and Colors ---
+# Solarized Light Theme (iTerm2 variant)
+background = fdf6e3
+foreground = 657b83
+cursor-color = 657b83
+cursor-text = fdf6e3
+
+# Solarized color palette
+# Black (gray)
+palette = 0=#073642
+palette = 8=#002b36
+# Red
+palette = 1=#dc322f
+palette = 9=#cb4b16
+# Green
+palette = 2=#859900
+palette = 10=#586e75
+# Yellow
+palette = 3=#b58900
+palette = 11=#657b83
+# Blue
+palette = 4=#268bd2
+palette = 12=#839496
+# Magenta
+palette = 5=#d33682
+palette = 13=#6c71c4
+# Cyan
+palette = 6=#2aa198
+palette = 14=#93a1a1
+# White (light gray)
+palette = 7=#eee8d5
+palette = 15=#fdf6e3
+
+# Selection colors
+selection-foreground = fdf6e3
+selection-background = 657b83
+
+# --- Window and Appearance ---
+background-opacity = 0.85
+background-blur-radius = 30
+macos-titlebar-style = transparent
+window-padding-x = 10
+window-padding-y = 8
+window-save-state = always
+window-theme = auto
+
+# --- Cursor ---
+cursor-style = bar
+cursor-style-blink = true
+cursor-opacity = 0.8
+
+# --- Mouse ---
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+# --- Quick Terminal (Quake-style dropdown) ---
+quick-terminal-position = top
+quick-terminal-screen = mouse
+quick-terminal-autohide = true
+quick-terminal-animation-duration = 0.15
+
+# --- Security ---
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
+
+# --- Shell Integration ---
+shell-integration = detect
+
+# -- Keybindings ---
+# Tabs
+keybind = cmd+t=new_tab
+keybind = cmd+left=previous_tab
+keybind = cmd+right=next_tab
+keybind = cmd+w=close_surface
+
+
+# Splits
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+alt+left=goto_split:left
+keybind = cmd+alt+right=goto_split:right
+keybind = cmd+alt+up=goto_split:top
+keybind = cmd+alt+down=goto_split:bottom
+
+# Font size
+keybind = cmd+plus=increase_font_size:1
+keybind = cmd+minus=decrease_font_size:1
+keybind = cmd+zero=reset_font_size
+
+# Quick terminal global hotkey
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+# Splits management
+keybind = cmd+shift+e=equalize_splits
+keybind = cmd+shift+f=toggle_split_zoom
+
+# tmux
+# tmux window 创建和关闭
+keybind = cmd+shift+t=text:\x13c
+keybind = cmd+shift+w=text:\x13x
+# window切换
+keybind = cmd+shift+left=text:\x13p
+keybind = cmd+shift+right=text:\x13n
+# Reload config
+keybind = cmd+s>r=reload_config
+# 创建新的window
+keybind = cmd+s>n=new_window
+
+# --- Performance ---
+# Generous scrollback (25MB)
+scrollback-limit = 25000000
